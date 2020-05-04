@@ -22,10 +22,8 @@ const PokedexNavigator = createSharedElementStackNavigator({
         <HeaderButtons HeaderButtonComponent={HeaderButton}>
           <Item
             title="Search"
-            iconName={Platform.OS === "android" ? "md-star" : "ios-star"}
-            onPress={() => {
-              // navigation.navigate("NewPlace");
-            }}
+            iconName={navigation.getParam("grid") ? "ios-grid" : "ios-list"}
+            onPress={navigation.getParam("column")}
           />
         </HeaderButtons>
       ),

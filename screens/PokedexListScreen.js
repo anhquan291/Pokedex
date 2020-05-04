@@ -1,22 +1,40 @@
-import React, { useEffect } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import React, { useEffect, useState } from "react";
+import { View, Text, StyleSheet, Image, FlatList } from "react-native";
 import MyCarousel from "../components/MyCarousel";
 import { useSelector, useDispatch } from "react-redux";
 import * as pokedexActions from "../store/pokedex-actions";
 import { SharedElement } from "react-navigation-shared-element";
 import TouchableScale from "react-native-touchable-scale";
-import { FlatList } from "react-native-gesture-handler";
+import PokedexCard from "../components/PokedexCard";
 
 const PokedexScreen = (props) => {
   const dispatch = useDispatch();
-  const Pokedex = useSelector;
+  const [gridView, setGridView] = useState(true);
+  const pokedex = useSelector((state) => state.pokedex.pokedex);
   useEffect(() => {
     dispatch(pokedexActions.fetchPokedex());
   }, [dispatch]);
+
+  useEffect(() => {
+    props.navigation.setParams({ column: setView, grid: gridView });
+  }, [gridView]);
+
+  const setView = () => {
+    setGridView((prev) => !prev);
+  };
+  const column = gridView ? 3 : 1;
   return (
     <View style={styles.container}>
-      <MyCarousel navigation={props.navigation} />
-      <FlatList />
+      {/* <MyCarousel navigation={props.navigation} /> */}
+      <FlatList
+        data={pokedex}
+        keyExtractor={(item) => item.id.toString()}
+        key={column}
+        numColumns={column}
+        renderItem={(itemData) => (
+          <PokedexCard item={itemData.item} column={column} />
+        )}
+      />
       {/* <TouchableScale
         style={styles.flex}
         activeScale={0.9}
@@ -40,7 +58,6 @@ const styles = StyleSheet.create({
     height: 200,
     resizeMode: "contain",
   },
-  shareContainer: {},
 });
 
 export default PokedexScreen;

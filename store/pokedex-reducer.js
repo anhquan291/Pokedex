@@ -7,9 +7,9 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case SET_POKEDEX:
-      return {
-        pokedex: action.pokedex,
-      };
+      return { pokedex: [...action.pokedex] };
+    default:
+      return state;
   }
   return state;
 };
