@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     borderRadius: 5,
     display: "flex",
+    backgroundColor: "#fff",
   },
   imageContainer: {
     alignItems: "center",
