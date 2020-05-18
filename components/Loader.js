@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, Image, Animated } from "react-native";
+import React, { useEffect } from "react";
+import { StyleSheet, Image, Animated } from "react-native";
 import { Easing } from "react-native-reanimated";
 
 const Loader = (props) => {
@@ -21,14 +21,14 @@ const Loader = (props) => {
   return (
     <Animated.Image
       style={{ ...styles.loader, transform: [{ rotate: spin }] }}
-      source={require("../images/loader3.png")}
+      source={require("../images/loader4.png")}
     ></Animated.Image>
   );
 };
 const styles = StyleSheet.create({
   loader: {
-    width: 120,
-    height: 120,
+    width: 70,
+    height: 70,
   },
 });
 

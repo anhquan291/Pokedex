@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Pokemons Information",
-    "slug": "pokedex",
+    "name": "Pokedex new update",
+    "slug": "pokedex-new-update",
     "platforms": [
       "ios",
       "android",
@@ -23,6 +23,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "sdkVersion": "37.0.0",
+    "description": "update 2"
   }
 }

@@ -7,7 +7,7 @@ const IntroductionScreen = () => {
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>
-        <Image style={styles.image} source={require("../images/banner3.jpg")} />
+        <Image style={styles.image} source={require("../images/banner5.jpg")} />
         <Text style={styles.title}>Introduction</Text>
         <Text style={styles.text}>
           Pokémon, electronic game series from Nintendo that debuted in Japan in

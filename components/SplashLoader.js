@@ -25,15 +25,13 @@ const SplashLoader = (props) => {
           toValue: 1,
           duration: 1000,
         }),
-        Animated.loop(
-          Animated.timing(spinValue, {
-            toValue: 1,
-            delay: 300,
-            duration: 3000,
-            easing: Easing.linear,
-            // useNativeDriver: true,
-          })
-        ),
+        Animated.timing(spinValue, {
+          toValue: 1,
+          delay: 300,
+          duration: 3700,
+          // easing: Easing.linear,
+          // useNativeDriver: true,
+        }),
       ]),
     ]).start();
     const timer = setTimeout(() => {
@@ -52,7 +50,7 @@ const SplashLoader = (props) => {
         transform: [{ rotate: spin }, { scale: spring }],
         opacity: opacity,
       }}
-      source={require("../images/loader3.png")}
+      source={require("../images/loader2.png")}
     ></Animated.Image>
   );
 };

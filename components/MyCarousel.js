@@ -9,7 +9,6 @@ import {
   TouchableNativeFeedback,
 } from "react-native";
 import Carousel from "react-native-snap-carousel";
-import { SharedElement } from "react-navigation-shared-element";
 
 const deviceWidth = Dimensions.get("window").width;
 export class MyCarousel extends Component {
@@ -19,7 +18,7 @@ export class MyCarousel extends Component {
       entries: [
         {
           id: 1,
-          url: require("../images/banner3.jpg"),
+          url: require("../images/banner1.jpg"),
         },
         {
           id: 2,
@@ -27,11 +26,11 @@ export class MyCarousel extends Component {
         },
         {
           id: 3,
-          url: require("../images/banner3.jpg"),
+          url: require("../images/banner4.jpg"),
         },
         {
           id: 4,
-          url: require("../images/banner2.jpg"),
+          url: require("../images/banner5.jpg"),
         },
       ],
     };
@@ -59,6 +58,8 @@ export class MyCarousel extends Component {
     return (
       <View style={styles.slideContainer}>
         <Carousel
+          // autoplay={true}
+          loop={true}
           ref={(c) => {
             this._carousel = c;
           }}

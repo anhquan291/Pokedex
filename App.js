@@ -12,6 +12,10 @@ const fetchFonts = () => {
   return Font.loadAsync({
     "pokemon-info": require("./assets/fonts/Pokemon.ttf"),
     pokemon: require("./assets/fonts/Sugarpunch.otf"),
+    cartoon: require("./assets/fonts/cartoon.ttf"),
+    batman: require("./assets/fonts/BATMAN.ttf"),
+    nothingmuch: require("./assets/fonts/nothingmuch.ttf"),
+    teko: require("./assets/fonts/Teko-Regular.ttf"),
   });
 };
 const rootReducer = combineReducers({
