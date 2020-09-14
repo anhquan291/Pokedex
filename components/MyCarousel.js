@@ -38,21 +38,10 @@ export class MyCarousel extends Component {
 
   render() {
     const renderItem = ({ item, index }) => {
-      let TouchableComp = TouchableOpacity;
-      if (Platform.OS === "android") {
-        TouchableComp = TouchableNativeFeedback;
-      }
       return (
-        <TouchableComp
-          useForeground
-          onPress={() => {
-            this.props.navigation.navigate("IntroScreen");
-          }}
-        >
-          <View style={styles.container}>
-            <Image style={styles.slide} source={item.url}></Image>
-          </View>
-        </TouchableComp>
+        <View style={styles.container}>
+          <Image style={styles.slide} source={item.url}></Image>
+        </View>
       );
     };
     return (
@@ -89,9 +78,9 @@ const styles = StyleSheet.create({
   },
   slide: {
     width: "100%",
-    height: "100%",
+    height: 180,
     borderRadius: 10,
-    resizeMode: "cover",
+    resizeMode: "stretch",
   },
 });
 export default MyCarousel;

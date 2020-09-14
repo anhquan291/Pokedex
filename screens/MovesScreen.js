@@ -12,7 +12,6 @@ import {
 import { useSelector } from "react-redux";
 import Moves from "../components/Moves";
 import { Ionicons } from "@expo/vector-icons";
-import { SearchBar } from "react-native-elements";
 
 const MovesScreen = (props) => {
   const [active, setActive] = useState(0);

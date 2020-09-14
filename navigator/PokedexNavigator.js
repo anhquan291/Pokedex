@@ -10,7 +10,6 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import { Transition } from "react-native-reanimated";
 import { Platform, View, SafeAreaView, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import HeaderButton from "../components/HeaderButton";

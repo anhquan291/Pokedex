@@ -19,16 +19,8 @@ const PokedexScreen = (props) => {
     (state) => state.pokedex.pokeFavorite
   );
 
-  // useEffect(() => {
-  //   dispatch(pokedexActions.fetchFavoritePokemon());
-  // }, [dispatch]);
-  // const favPoke = [];
-  // currentFavoritePokemon.map((pokemon) =>
-  //   favPoke.push(JSON.parse(pokemon.data))
-  // );
-
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <LinearGradient
         colors={["#96c93d", "#00b09b"]}
         style={styles.background}
@@ -63,7 +55,7 @@ const PokedexScreen = (props) => {
           )}
         />
       )}
-    </SafeAreaView>
+    </View>
   );
 };
 const styles = StyleSheet.create({
@@ -78,6 +70,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   headerContainer: {
+    marginTop: 40,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
