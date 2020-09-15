@@ -28,7 +28,7 @@ expo start
 ```
 
 
-#### Feature
+## Feature
   - Pokemon Detail
   - Abilities 
   - Movements
